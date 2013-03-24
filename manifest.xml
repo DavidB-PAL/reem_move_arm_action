@@ -1,0 +1,24 @@
+<package>
+  <description brief="reem_move_arm_action">
+An Action Server to move the left or right arm to a specific pose.
+
+Moves the arm directly using the FollowJointTrajectory Action, or by calling move_arm for collision-free planning.
+
+This node is required for some key scenarios, including moving the arms to a collision-free home position, and a pre-grasp position for tabletop manipulation.
+  </description>
+  <author>David Butterworth</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reem_move_arm_action</url>
+
+  <depend package="roscpp"/>
+  <depend package="reem_gazebo"/>
+  <depend package="reem_arm_navigation"/>
+
+</package>
+
+
+
+
+
+
