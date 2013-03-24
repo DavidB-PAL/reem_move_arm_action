@@ -19,7 +19,7 @@ This node is required for some key scenarios:
 <br>
 Poses: <br>
  - home (all joints zero) <br>
- - init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(arms at side of body) <br>
+ - init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(arms at side of body) <br>
  - home_to_init (arms at side of body)  un-safe move, no collision planning <br>
  - surrender <br>
  - hands_up1 <br>
@@ -35,15 +35,15 @@ Poses: <br>
 ToDo: - This node is still just a binary for testing. Turn it into a proper ROS Action Server!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sometimes move_arm fails during trajectory filtering, a maximum of 2 times. <br>
-Need to add a 3x retry loop to this node, so this node doesn't fail.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Need to add a 3x retry loop to this node, so this node doesn't fail.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Make joint poses easily configurable via YAML file.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Modify move_arm node to output which links are in collision, for debugging purposes, and for higher level planning.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Currently poses are specified for 7 joints, and right_arm_torso is padded with the extra joints. Could do this in reverse, so poses are defined with all joints, and the left_arm will ignore the extra joint positions.
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Currently poses are specified for 7 joints, and right_arm_torso is padded with the extra joints. Could do this in reverse, so <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; poses are defined with all joints, and the left_arm will ignore the extra joint positions.
 <br>
 
 <br>
@@ -81,10 +81,10 @@ $ roslaunch reem_perception_launch perception_movearm.launch sim:=true use_snaps
 Build a Collision Map: <br>
 $ rosrun reem_head_scan_action scan_table <br>
 Move both arms away from collision with the body: <br>
-rosrun reem_move_arm_action move --arm=left --pose=home_to_init <br>
-rosrun reem_move_arm_action move --arm=right --pose=home_to_init <br>
+$ rosrun reem_move_arm_action move --arm=left --pose=home_to_init <br>
+$ rosrun reem_move_arm_action move --arm=right --pose=home_to_init <br>
 Move the arm into a specific pose, whilst avoiding the table: <br>
-rosrun reem_move_arm_action move --arm=left --pose=hand_forward
+$ rosrun reem_move_arm_action move --arm=left --pose=hand_forward
 
 
 
