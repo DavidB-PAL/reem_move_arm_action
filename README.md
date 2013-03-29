@@ -84,7 +84,7 @@ Move both arms away from collision with the body: <br>
 $ rosrun reem_move_arm_action move --arm=left --pose=home_to_init <br>
 $ rosrun reem_move_arm_action move --arm=right --pose=home_to_init <br>
 Move the arm into a specific pose, whilst avoiding the table: <br>
-$ rosrun reem_move_arm_action move --arm=left --pose=hand_forward
+$ rosrun reem_move_arm_action move --arm=left --pose=elbow_back
 
 
 
